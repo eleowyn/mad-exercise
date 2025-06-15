@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   ScrollView,
 } from 'react-native';
@@ -8,6 +8,7 @@ import Title from './components/Title';
 import Subtitle from './components/Subtitle';
 
 const App = () => {
+  // let title = 'Welcome';
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <Title/>
@@ -15,7 +16,7 @@ const App = () => {
       <TextInput placeholder="Masukan email anda" />
       <Subtitle text="Password"/>
       <TextInput placeholder="Masukan password anda" />
-      <Button text="Sign In" />
+      <Button text="Sign In" onPress={onSignIn}/>
       <Button text="Google" color="red" textColor="white" />
       <Button text="Facebook" color="blue" textColor="white" />
       <Button text="Apple" color="black" textColor="white" />

@@ -3,7 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import Flexbox from './exercise05';
+import App from './exercise06';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => Flexbox);
+AppRegistry.registerComponent(appName, () => App);

@@ -9,8 +9,10 @@ export default Subtitle;
 
 const styles = StyleSheet.create({
   text: {
-    padding: 15,
-    fontSize: 25,
-    marginVertical: 10,
+    paddingLeft: 20,
+    paddingBottom: 5,
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginVertical: 5,
   },
 });
