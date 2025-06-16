@@ -3,7 +3,11 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './exercise06';
-import {name as appName} from './app.json';
+import App from './App';
 
-AppRegistry.registerComponent(appName, () => App);
+import {name as appName} from './app.json';
+import Login from './exercise04';
+import Flexbox from './Flexbox';
+import RestApi from './RestApi';
+
+AppRegistry.registerComponent(appName, () => RestApi);
