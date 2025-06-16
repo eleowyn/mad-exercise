@@ -7,15 +7,20 @@ const Exercise7 = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios
-      .get('https://reqres.in/api/users?page=1')
-      .then(res => {
-        setUsers(res.data.data);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }, []);
+  const fetchUsers = async () => {
+    try {
+      const [res1, res2] = await Promise.all([
+        axios.get('https://reqres.in/api/users?page=1'),
+        axios.get('https://reqres.in/api/users?page=2'),
+      ]);
+      setUsers([...res1.data.data, ...res2.data.data]);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  fetchUsers();
+}, []);
 
   return (
     <ScrollView>
