@@ -10,4 +10,4 @@ import Login from './exercise04';
 import Flexbox from './Flexbox';
 import RestApi from './RestApi';
 
-AppRegistry.registerComponent(appName, () => RestApi);
+AppRegistry.registerComponent(appName, () => App);
